@@ -180,7 +180,9 @@ def test_no_api_key_leaked():
 
 
 def test_no_executable_scripts():
-    """纯提示词资产不应包含 .py 实现脚本（测试文件除外）。"""
+    """实现脚本只允许位于各资产的 scripts/ 目录（P1 深度改造规范：T1/T3
+    资产必须带确定性脚本 scripts/<slug>.py 与 out/ 真实产物）；
+    其余位置（测试目录除外）不得出现散落 .py。"""
     forbidden = []
     for f in REPO_ROOT.rglob("*.py"):
         rel = f.relative_to(REPO_ROOT)
@@ -188,6 +190,8 @@ def test_no_executable_scripts():
         if "tests" in parts:
             continue
         if f.name in ("conftest.py",):
+            continue
+        if "scripts" in parts:
             continue
         forbidden.append(str(rel))
     assert not forbidden, f"发现不应存在的实现脚本: {forbidden}"

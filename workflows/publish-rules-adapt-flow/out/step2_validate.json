@@ -1,0 +1,9 @@
+{
+  "node": "publish-rules-validate",
+  "读取产物": "step1_adapt.json",
+  "字数": 244,
+  "命中数": 0,
+  "violations": [],
+  "verdict": "通过",
+  "风险等级": "低"
+}
