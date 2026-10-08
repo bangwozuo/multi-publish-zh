@@ -1,0 +1,51 @@
+name: 分发中控
+repo: bangwozuo/multi-publish-zh
+legacy_name: 多平台发布与数据回捞助理
+version: 0.2.0
+asset_type: prompt-only
+stage: P1
+complexity: M，P1 二期（低价走量款，订阅组合第一环）
+group: OPC
+runtime_dependencies: none
+api_key_required: false
+demand_ids:
+  - D11
+  - D19
+
+workflows:
+  - name: 内容一次录入
+    id: de_dev_05_wf01
+  - name: 平台规则适配
+    id: de_dev_05_wf02
+  - name: 定时发布
+    id: de_dev_05_wf03
+  - name: 发布数据回捞
+    id: de_dev_05_wf04
+  - name: 跨平台对比报表
+    id: de_dev_05_wf05
+
+skills:
+  - id: platform-format-adapt
+    name: 平台格式适配
+    family: 
+  - id: publish-rules-validate
+    name: 发布规则校验
+    family: 
+  - id: publish-schedule
+    name: 发布排期
+    family: 
+  - id: publish-execute
+    name: 发布执行
+    family: 
+  - id: publish-data-collect
+    name: 发布数据回收
+    family: 
+  - id: effect-attribution
+    name: 效果归因
+    family: 
+
+compliance:
+  ai_label_required: true
+  human_review_required: true
+  forbidden_words_check: true
+  official_api_only: true

@@ -1,0 +1,82 @@
+{
+  "skill_id": "de_dev_05_sk04",
+  "name": "发布执行",
+  "type": "atomic",
+  "input": {
+    "type": "object",
+    "required": [
+      "schedule",
+      "assets"
+    ],
+    "properties": {
+      "schedule": {
+        "type": "string",
+        "description": "排期表：已确认的发布计划"
+      },
+      "assets": {
+        "type": "string",
+        "description": "物料：已就绪的文案与素材清单"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "manifest",
+      "checklist",
+      "limitation"
+    ],
+    "properties": {
+      "manifest": {
+        "type": "array",
+        "description": "逐个平台的最终物料",
+        "items": {
+          "type": "object",
+          "properties": {
+            "平台": {
+              "type": "string"
+            },
+            "时间": {
+              "type": "string"
+            },
+            "标题": {
+              "type": "string"
+            },
+            "正文": {
+              "type": "string"
+            },
+            "素材": {
+              "type": "string"
+            },
+            "状态": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "checklist": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "人工发布前必须确认的事项"
+      },
+      "limitation": {
+        "type": "string",
+        "description": "明确声明需人工执行发布"
+      }
+    },
+    "x-rendered-from": "capability:publish"
+  },
+  "constraints": {
+    "max_input_length": 5000,
+    "forbidden_words": [
+      "最好",
+      "第一",
+      "100%"
+    ],
+    "ai_label_required": true,
+    "human_review_required": true,
+    "external_api_required": false
+  }
+}

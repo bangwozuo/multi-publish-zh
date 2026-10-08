@@ -1,0 +1,82 @@
+{
+  "skill_id": "de_dev_05_sk02",
+  "name": "发布规则校验",
+  "type": "atomic",
+  "input": {
+    "type": "object",
+    "required": [
+      "text"
+    ],
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "待检内容：需要校验的文案或图片描述"
+      },
+      "platform": {
+        "type": "string",
+        "description": "目标平台：适用平台规则（可选）"
+      },
+      "rules": {
+        "type": "string",
+        "description": "规则与词表：禁用词、平台规则（可选，缺省用通用广告法词表）"
+      }
+    }
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "verdict",
+      "violations",
+      "suggestions"
+    ],
+    "properties": {
+      "verdict": {
+        "type": "object",
+        "description": "是否通过 / 风险等级"
+      },
+      "violations": {
+        "type": "array",
+        "description": "逐项列出违规内容",
+        "items": {
+          "type": "object",
+          "properties": {
+            "#": {
+              "type": "string"
+            },
+            "违规词/表述": {
+              "type": "string"
+            },
+            "原文片段": {
+              "type": "string"
+            },
+            "违反规则": {
+              "type": "string"
+            },
+            "修改建议": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "suggestions": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "针对性的改写方向"
+      }
+    },
+    "x-rendered-from": "capability:compliance_check"
+  },
+  "constraints": {
+    "max_input_length": 5000,
+    "forbidden_words": [
+      "最好",
+      "第一",
+      "100%"
+    ],
+    "ai_label_required": true,
+    "human_review_required": true,
+    "external_api_required": false
+  }
+}
