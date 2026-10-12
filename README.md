@@ -110,24 +110,24 @@ multi-publish-zh/
 
 ## 技能清单（6 个）
 
-| # | 技能 | 能力族 | 复杂度 | 提示词 | 文档 |
-|---|------|--------|--------|--------|------|
-| 1 | 平台格式适配 | 改写与适配 | `S` | [prompt.txt](skills/platform-format-adapt/prompt.txt) | [docs](skills/platform-format-adapt/docs/) |
-| 2 | 发布规则校验 | 合规校验 | `S` | [prompt.txt](skills/publish-rules-validate/prompt.txt) | [docs](skills/publish-rules-validate/docs/) |
-| 3 | 发布排期 | 排期与调度 | `S` | [prompt.txt](skills/publish-schedule/prompt.txt) | [docs](skills/publish-schedule/docs/) |
-| 4 | 发布执行 | 发布执行 | `M` | [prompt.txt](skills/publish-execute/prompt.txt) | [docs](skills/publish-execute/docs/) |
-| 5 | 发布数据回收 | 数据采集 | `M` | [prompt.txt](skills/publish-data-collect/prompt.txt) | [docs](skills/publish-data-collect/docs/) |
-| 6 | 效果归因 | 归因诊断 | `S` | [prompt.txt](skills/effect-attribution/prompt.txt) | [docs](skills/effect-attribution/docs/) |
+| # | 技能 | 能力族 | 复杂度 | 说明文档 |
+|---|------|--------|--------|----------|
+| 1 | 平台格式适配 | 改写与适配 | `S` | [README](skills/platform-format-adapt/README.md) |
+| 2 | 发布规则校验 | 合规校验 | `S` | [README](skills/publish-rules-validate/README.md) |
+| 3 | 发布排期 | 排期与调度 | `S` | [README](skills/publish-schedule/README.md) |
+| 4 | 发布执行 | 发布执行 | `M` | [README](skills/publish-execute/README.md) |
+| 5 | 发布数据回收 | 数据采集 | `M` | [README](skills/publish-data-collect/README.md) |
+| 6 | 效果归因 | 归因诊断 | `S` | [README](skills/effect-attribution/README.md) |
 
 ## 工作流清单（5 条）
 
-| # | 工作流 | 阶段 | 复杂度 | 触发 | 定义 | 文档 |
-|---|--------|------|--------|------|------|------|
-| 1 | 内容一次录入 | `P1` | `S` | 人工 | [SKILL.md](workflows/content-single-entry-flow/SKILL.md) | [docs](workflows/content-single-entry-flow/docs/) |
-| 2 | 平台规则适配 | `P1` | `S` | 事件（录入后） | [SKILL.md](workflows/publish-rules-adapt-flow/SKILL.md) | [docs](workflows/publish-rules-adapt-flow/docs/) |
-| 3 | 定时发布 | `P1` | `M` | 定时 | [SKILL.md](workflows/scheduled-publish-flow/SKILL.md) | [docs](workflows/scheduled-publish-flow/docs/) |
-| 4 | 发布数据回捞 | `P1` | `M` | 定时（T+1/T+7） | [SKILL.md](workflows/publish-data-retrieval-flow/SKILL.md) | [docs](workflows/publish-data-retrieval-flow/docs/) |
-| 5 | 跨平台对比报表 | `P2` | `S` | 定时（每周） | [SKILL.md](workflows/cross-platform-report-flow/SKILL.md) | [docs](workflows/cross-platform-report-flow/docs/) |
+| # | 工作流 | 阶段 | 复杂度 | 触发 | 说明文档 |
+|---|--------|------|--------|------|----------|
+| 1 | 内容一次录入 | `P1` | `S` | 人工 | [README](workflows/content-single-entry-flow/README.md) |
+| 2 | 平台规则适配 | `P1` | `S` | 事件（录入后） | [README](workflows/publish-rules-adapt-flow/README.md) |
+| 3 | 定时发布 | `P1` | `M` | 定时 | [README](workflows/scheduled-publish-flow/README.md) |
+| 4 | 发布数据回捞 | `P1` | `M` | 定时（T+1/T+7） | [README](workflows/publish-data-retrieval-flow/README.md) |
+| 5 | 跨平台对比报表 | `P2` | `S` | 定时（每周） | [README](workflows/cross-platform-report-flow/README.md) |
 
 ---
 
