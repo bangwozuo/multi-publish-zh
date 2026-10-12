@@ -4,8 +4,7 @@
 
 ![分发中控 · 动态演示](docs/assets/hero.gif)
 
-*▲ 实时演示（自动循环）· [▶ 观看完整版合集视频](docs/demo.mp4)*
-
+*▲ 真实执行录播（自动循环播放）· [▶ 观看完整版合集视频](docs/demo.mp4)*
 
 [![Stage](https://img.shields.io/badge/stage-P1-orange)](https://github.com/bangwozuo)
 [![Asset](https://img.shields.io/badge/asset-prompt--only-blueviolet)](#资产形态)
@@ -113,12 +112,12 @@ multi-publish-zh/
 
 | # | 技能 | 能力族 | 复杂度 | 提示词 | 文档 |
 |---|------|--------|--------|--------|------|
-| 1 | 平台格式适配 | 改写适配 | `S` | [prompt.txt](skills/platform-format-adapt/prompt.txt) | [docs](skills/platform-format-adapt/docs/) |
+| 1 | 平台格式适配 | 改写与适配 | `S` | [prompt.txt](skills/platform-format-adapt/prompt.txt) | [docs](skills/platform-format-adapt/docs/) |
 | 2 | 发布规则校验 | 合规校验 | `S` | [prompt.txt](skills/publish-rules-validate/prompt.txt) | [docs](skills/publish-rules-validate/docs/) |
-| 3 | 发布排期 | 排期调度 | `S` | [prompt.txt](skills/publish-schedule/prompt.txt) | [docs](skills/publish-schedule/docs/) |
-| 4 | 发布执行 | — | `M` | [prompt.txt](skills/publish-execute/prompt.txt) | [docs](skills/publish-execute/docs/) |
+| 3 | 发布排期 | 排期与调度 | `S` | [prompt.txt](skills/publish-schedule/prompt.txt) | [docs](skills/publish-schedule/docs/) |
+| 4 | 发布执行 | 发布执行 | `M` | [prompt.txt](skills/publish-execute/prompt.txt) | [docs](skills/publish-execute/docs/) |
 | 5 | 发布数据回收 | 数据采集 | `M` | [prompt.txt](skills/publish-data-collect/prompt.txt) | [docs](skills/publish-data-collect/docs/) |
-| 6 | 效果归因 | 分析诊断 | `S` | [prompt.txt](skills/effect-attribution/prompt.txt) | [docs](skills/effect-attribution/docs/) |
+| 6 | 效果归因 | 归因诊断 | `S` | [prompt.txt](skills/effect-attribution/prompt.txt) | [docs](skills/effect-attribution/docs/) |
 
 ## 工作流清单（5 条）
 
